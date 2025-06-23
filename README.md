@@ -60,16 +60,6 @@ python train.py config.yaml
 
 ### Prepare C++ Environment for SEAL CKKS
 
-> Install g++
-
-```bash
-sudo apt-get update
-sudo apt-get install g++
-sudo apt install make build-essential git
-sudo apt install m4
-sudo apt install cmake
-```
-
 > Install GMP
 
 ```bash
