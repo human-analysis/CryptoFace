@@ -147,8 +147,6 @@ def main(args):
                     args.output_dir+"/model.ckpt")
     
     # log
-    print(f"Backbone: {backbone_params} K params")
-    print(f"Head: {head_params} K params")
     print("Acc: {:.4f}".format(test_acc))
     if args.use_wandb:
         wandb.finish()
