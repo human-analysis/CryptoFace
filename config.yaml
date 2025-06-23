@@ -1,0 +1,23 @@
+arch: pcnn
+train_data_dir: <PATH>/WebFace4M
+test_data_dir: <PATH>/faces_emore
+output_dir: <PATH>/experiments/pcnn
+seed: 0
+gpu: 0
+input_size: 64
+batch_size: 256
+patch_size: 32
+epochs: 26
+num_workers: 16
+lr: 0.05
+lr_milestones:
+- 12
+- 20
+- 24
+lr_gamma: 0.1
+momentum: 0.9
+weight_decay: 0.0005
+ckpt_path: null
+grad_clip: 1
+wandb_proj: CryptoFace
+jigsaw_weight: 0.005
