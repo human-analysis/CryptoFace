@@ -128,7 +128,6 @@ def main(args):
                 poly_thresholds.append([x3, x1, x2, a, b, c, best_threshold])
                 all_accuracy.append(accuracy)
                 all_best_threshold.append(best_threshold)
-                np.save(os.path.join(args.output_dir, f"{dataname}_{fold_idx}_values.npy"), val)
             poly_metric.update({f"{dataname}_acc": np.mean(all_accuracy), f"{dataname}_threshold": np.mean(all_best_threshold)})
             poly_accuracy.append(np.mean(all_accuracy))
             poly_thresholds = np.asarray(poly_thresholds)
