@@ -39,8 +39,8 @@ def main(args):
     ckpt = torch.load(args.ckpt_path, map_location=device, weights_only=False)
     backbone.load_state_dict(ckpt["backbone"])
     backbone.eval()
-    print("#Params: {:d}".format(count_parameters(backbone)/10**6))
-    print("#Params: {:d}".format(count_parameters(backbone)/10**6), file=log)
+    print("#Params: {:d}".format(count_parameters(backbone)))
+    print("#Params: {:d}".format(count_parameters(backbone)), file=log)
 
     # dataset
     lfw_loader, cfpfp_loader, cplfw_loader, agedb30_loader, calfw_loader = FaceEmore(args)
