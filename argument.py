@@ -13,7 +13,7 @@ def CLI():
     parser.add_argument('--test-data-dir', metavar='PATH', default=None, type=str, help='path to test data')
     parser.add_argument('--gpu', default=None, type=int, help='GPU id to use.')
     parser.add_argument('--output-dir', metavar='PATH', default=None, type=str, help='path to output')
-    parser.add_argument('--input-size', metavar='N', type=int, default=64, help='input image size (default:64)')
+    parser.add_argument('--input-size', metavar='N', type=int, default=None, help='input image size')
     parser.add_argument('--seed', metavar='N', type=int, default=0, help='random seed (default:0)')
     parser.add_argument('--batch-size', metavar='N', default=None, type=int, help='batch size')
     parser.add_argument('--patch-size', metavar='N', default=None, type=int, help='patch size')
@@ -53,7 +53,7 @@ def CLI():
         raise FileNotFoundError(f"Not found {args.ckpt_path}")
   
     args.num_classes, args.num_images = 205990, 4235242
-    print(f'Check training dataset: {args.num_images} images with {args.num_classes} classes')
+    print(f'Check training dataset (WebFace4M): {args.num_images} images with {args.num_classes} classes')
     # WebFace4M: 205990 IDs and 4235242 Imgs 
     for data_name in ["lfw", "cplfw", "agedb_30", "calfw", "cfp_fp"]:
         if not os.path.isfile(os.path.join(args.test_data_dir, f'{data_name}.bin')):
