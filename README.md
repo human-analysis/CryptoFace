@@ -2,13 +2,13 @@
 
 Official implementation for *CryptoFace: End-to-End Encrypted Face Recognition*. The paper is presented at [CVPR 2025](https://openaccess.thecvf.com/content/CVPR2025/papers/Ao_CryptoFace_End-to-End_Encrypted_Face_Recognition_CVPR_2025_paper.pdf).
 
-## ✨ <span style="color:red">Repo Features </span>
+### ✨✨Repo Features✨✨
 
-- **1️⃣ PyTorch Training (Python)**
+- **1️⃣ PyTorch Training ![Python](https://img.shields.io/badge/PyTorch-Python-green)**
 
-- **2️⃣ Microsoft SEAL FHE Inference (C++)**
+- **2️⃣ Microsoft SEAL FHE Inference ![C++](https://img.shields.io/badge/FHE-C++-red)**
 
-- **3️⃣ Seamless Pipeline: PyTorch → SEAL**
+- **3️⃣ Seamless Pipeline: ![Python](https://img.shields.io/badge/PyTorch-Python-green) → ![C++](https://img.shields.io/badge/FHE-C++-red)**
 
 <img src="assets/cryptoface.png" style="zoom:130%;" />
 
